@@ -1,0 +1,21 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+    "header header header"
+    ". content ."
+    "footer footer footer"
+}
+
+header{
+    grid-area: header;
+}
+
+main{
+    grid-area:content;
+}
+
+footer{
+    grid-area:footer;
+}
