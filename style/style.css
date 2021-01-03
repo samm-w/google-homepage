@@ -1,3 +1,9 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
 body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -5,17 +11,35 @@ body{
     grid-template-areas:
     "header header header"
     ". content ."
-    "footer footer footer"
+    "footer footer footer";
+    width: 100vw;
+    height: 100vh;
 }
 
 header{
-    grid-area: header;
+    grid-area:header;
+}
+
+footer{
+    grid-area:footer;
+    align-self: end;
+    margin-bottom: 20px;
+    background-color: gray;
 }
 
 main{
     grid-area:content;
 }
 
-footer{
-    grid-area:footer;
+ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+
 }
+
+li{
+    display: inline;
+    float:left;
+}
+
