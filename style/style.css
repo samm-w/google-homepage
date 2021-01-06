@@ -2,12 +2,13 @@
     box-sizing: border-box;
     padding:0;
     margin:0;
+    color: #000;
 }
 
 body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 100px 1fr 100px;
     grid-template-areas:
     "header header header"
     ". content ."
@@ -24,22 +25,99 @@ footer{
     grid-area:footer;
     align-self: end;
     margin-bottom: 20px;
-    background-color: gray;
+    background-color: #f2f2f2;
+    padding-top: 10px;
+    margin-bottom: 50px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    
 }
 
 main{
     grid-area:content;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 300px;
+
 }
 
 ul{
     list-style-type: none;
     margin:0;
     padding:0;
+    margin-top: 20px;
 
 }
 
 li{
     display: inline;
     float:left;
+    
 }
 
+.img{
+    margin-left: 60px;
+}
+
+
+input[type="text"]{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width:400px;
+    height: 35px;
+    border-radius: 20px;
+    outline: none;
+    margin-top:15px;
+}
+
+button{
+    background-color:#f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    font-size:14px;
+    padding: 0 16px;
+    margin-top: 20px;
+    justify-self: center;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    line-height: 27px;
+    height:36px;
+    min-width: 54px;
+    text-align: center;
+    cursor:pointer;
+    margin-right:4px;
+}
+
+.french-option{
+    margin-left: 110px;
+    margin-top:20px;
+}
+
+a{
+    color:black;
+    text-decoration:none;
+    margin-right: 20px;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.profile{
+    width:32px;
+    height:32px;
+    margin-left:0;
+    margin-right: 20px;
+}
+
+
+
+.app-icon{
+    margin-right: 20px;
+    width:20px;
+    height: 20px;
+}
+
+.footer{
+    text-align: center;
+}
